@@ -22,6 +22,9 @@ const MovieSearchApp = () => {
     setLoading(true)
     try {
       // setSelectedMovie(null)
+
+
+      
       const response = await axios.get(`${API_URL}?t=${searchTerm}&apikey=${API_KEY}`);
       if(response.data.Error){
         alert(response.data.Error)
